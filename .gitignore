@@ -75,3 +75,5 @@ yarn-error.log*
 # logs
 logs
 *.log
+
+backend/flask_session/
