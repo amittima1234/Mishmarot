@@ -6,7 +6,7 @@ import os
 from auth import auth, config_oauth
 from routes import register_routes
 from utils.db import db
-from models import User, System
+from models import User, System, UserSystem
 
 load_dotenv()
 
