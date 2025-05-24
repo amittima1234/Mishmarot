@@ -1,0 +1,7 @@
+Flask
+python-dotenv
+flask-session
+authlib
+pywebpush
+flask-sqlalchemy
+psycopg2-binary

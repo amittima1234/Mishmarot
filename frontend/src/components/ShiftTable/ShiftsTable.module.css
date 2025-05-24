@@ -1,0 +1,304 @@
+/* רקע כללי */
+.pageBg {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 2rem 0.5rem;
+}
+
+/* כותרת */
+.title {
+	font-size: 2.2rem;
+	font-weight: 800;
+	color: #ba181b;
+	margin-bottom: 2rem;
+	letter-spacing: 0.04em;
+	text-align: center;
+}
+
+/* קונטיינר שבוע */
+.weekContainer {
+	margin-bottom: 2.5rem;
+	width: 100%;
+	border-radius: 18px;
+	box-shadow: 0 2px 12px #e5383b22;
+	overflow: hidden;
+	background: #fff;
+	border: 1.5px solid #ffd6da;
+	direction: rtl;
+}
+
+/* שבועות */
+.weekContainer1 {
+	border-color: #ffd6da;
+	box-shadow: 0 2px 12px #e5383b22;
+}
+.weekContainer2 {
+	border-color: #b5ead7;
+	box-shadow: 0 2px 12px #70c1b3aa;
+}
+.weekContainer3 {
+	border-color: #f9f7a1;
+	box-shadow: 0 2px 12px #ffe06699;
+}
+.weekContainer4 {
+	border-color: #b5d0ff;
+	box-shadow: 0 2px 12px #247ba099;
+}
+
+/* כותרת שבוע */
+.weekHeaderFuchsia,
+.weekHeaderCyan,
+.weekHeaderGreen,
+.weekHeaderYellow {
+	background: #ffe5ec;
+	color: #ba181b;
+	font-size: 2rem;
+	font-weight: bold;
+	text-align: center;
+	padding: 1rem 0;
+	letter-spacing: 0.08em;
+	border-bottom: 1.5px solid #ffd6da;
+}
+
+/* טבלת משמרות */
+.tableWrap {
+	overflow-x: auto;
+	width: 100%;
+	background: none;
+}
+
+.shiftsTable {
+	min-width: 700px;
+	width: 100%;
+	text-align: center;
+	font-size: 1.2rem;
+	border-collapse: collapse;
+	background: none;
+}
+
+/* תאים */
+.shiftsTable th,
+.shiftsTable td {
+	border: 1px solid #ffd6da;
+	padding: 0.6em 0.8em;
+}
+
+.shiftsTable th {
+	background: #fff0f3;
+	color: #ba181b;
+	font-weight: 700;
+}
+
+.shiftsTable td {
+	background: #fff;
+	color: #a4161a;
+}
+
+.shiftsTable tr:nth-child(even) td {
+	background: #fff0f3;
+}
+
+/* כותרות יום/תאריך */
+.dayHeader {
+	font-size: 1.05rem;
+	color: #ba181b;
+	font-weight: 600;
+}
+.dateHeader {
+	font-size: 1.2rem;
+	color: #e5383b;
+}
+
+/* צבעים שונים לכל יום בשבוע */
+.dayCol0 {
+	background: #ffe5ec !important;
+}
+.dayCol1 {
+	background: #fff0f3 !important;
+}
+.dayCol2 {
+	background: #f9f7a1 !important;
+}
+.dayCol3 {
+	background: #b5ead7 !important;
+}
+.dayCol4 {
+	background: #b5d0ff !important;
+}
+.dayCol5 {
+	background: #f3c4fb !important;
+}
+.dayCol6 {
+	background: #f7d6e0 !important;
+}
+
+/* שורות ראשיות */
+.phoneMain,
+.physMain {
+	background: #ffe5ec;
+	color: #ba181b;
+	font-weight: bold;
+}
+
+/* כוננים */
+.phoneDay {
+	background: #fff0f3;
+	color: #a4161a;
+}
+.phoneNight {
+	background: #ffe5ec;
+	color: #ba181b;
+}
+.physDay {
+	background: #f9f7a1;
+	color: #a4161a;
+}
+.physNight {
+	background: #b5ead7;
+	color: #155e75;
+}
+
+/* select */
+.select {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	padding: 0.4em 0.6em;
+	border-radius: 7px;
+	border: 1px solid #ffd6da;
+	font-weight: 500;
+	color: #a4161a;
+	background: #fff;
+	transition: border 0.2s;
+	display: block;
+}
+.select:focus {
+	outline: none;
+	border-color: #e5383b;
+}
+
+/* רספונסיביות */
+@media (max-width: 700px) {
+	.shiftsTable,
+	.tableWrap {
+		min-width: 0;
+		width: 100%;
+	}
+	.shiftsTable th,
+	.shiftsTable td {
+		padding: 0.5em 0.3em;
+		font-size: 0.95em;
+	}
+}
+
+/* --- DARK MODE --- */
+@media (prefers-color-scheme: dark) {
+	.weekContainer {
+		background: #232025;
+		border-color: #a4161a;
+		box-shadow: 0 2px 12px #a4161a33;
+	}
+	.weekContainer1 {
+		border-color: #a4161a;
+	}
+	.weekContainer2 {
+		border-color: #155e75;
+	}
+	.weekContainer3 {
+		border-color: #ffe066;
+	}
+	.weekContainer4 {
+		border-color: #247ba0;
+	}
+
+	.weekHeaderFuchsia,
+	.weekHeaderCyan,
+	.weekHeaderGreen,
+	.weekHeaderYellow {
+		background: #232025;
+		color: #fff;
+		border-bottom: 1.5px solid #a4161a;
+	}
+	.shiftsTable th {
+		background: #232025;
+		color: #fff;
+	}
+	.shiftsTable td {
+		background: #181818;
+		color: #fff;
+	}
+	.shiftsTable tr:nth-child(even) td {
+		background: #232025;
+	}
+	.dayHeader,
+	.dateHeader {
+		color: #fff !important;
+	}
+	.dayCol0 {
+		background: #2d232e !important;
+		color: #fff !important;
+	}
+	.dayCol1 {
+		background: #232025 !important;
+		color: #fff !important;
+	}
+	.dayCol2 {
+		background: #33331a !important;
+		color: #fff !important;
+	}
+	.dayCol3 {
+		background: #1a2d25 !important;
+		color: #fff !important;
+	}
+	.dayCol4 {
+		background: #1a233a !important;
+		color: #fff !important;
+	}
+	.dayCol5 {
+		background: #2d1a3a !important;
+		color: #fff !important;
+	}
+	.dayCol6 {
+		background: #3a1a2d !important;
+		color: #fff !important;
+	}
+
+	.phoneMain,
+	.physMain {
+		background: #2d232e;
+		color: #fff;
+	}
+	.phoneDay {
+		background: #232025;
+		color: #fff;
+	}
+	.phoneNight {
+		background: #2d232e;
+		color: #fff;
+	}
+	.physDay {
+		background: #33331a;
+		color: #fff;
+	}
+	.physNight {
+		background: #1a2d25;
+		color: #fff;
+	}
+	.select {
+		background: #232025;
+		color: #fff;
+		border-color: #a4161a;
+		width: 100%;
+		height: 100%;
+		box-sizing: border-box;
+		display: block;
+	}
+	.select:focus {
+		border-color: #ff6f91;
+	}
+	.title {
+		color: #fff;
+	}
+}
