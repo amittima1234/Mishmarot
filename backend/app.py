@@ -16,7 +16,7 @@ FRONT_END_URL = os.getenv('FRONT_END_URL')
 app.config['SESSION_TYPE'] = 'filesystem'
 Session(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://user:pass@localhost:5432/mydb'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Aa123456@localhost:5432/Mishmarot'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db.init_app(app)
@@ -37,5 +37,5 @@ def serve(path):
 
 if __name__ == "__main__":
     with app.app_context():
-		db.create_all()
+        db.create_all()
     app.run(debug=True)
